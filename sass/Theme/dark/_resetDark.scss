@@ -1,0 +1,6 @@
+body{
+    &.darkMode{ //thẻ thẻbody và thẻ darkmode không phải là thế hệ cha con, thẻ body chứa class tên darkmode
+        color: $color-dark-3;
+        background-color: $color-dark-1;
+    }
+}

@@ -1,0 +1,69 @@
+.sidebarMini {
+    position: fixed; /* đi theo webside khi trượt lên-xuống */
+    top: 25%;
+    right: 0;
+    width: 400px;
+    background-color: $color-gray-4;
+    z-index: 500;
+    transform: translateX(100%);/* trước khi ấn chỉ để lộ mỗi icon cog, hidden phần content */
+    border-left: 1px solid $color-gray-4;
+    transition: .5s;
+    .sidebarMini__button {
+        @include styleButton($color-black-0, $color-gray-4, $color-gray-4, $fs-5, $fw-0, $pd-2, $pd-3);
+        border-radius: 8px 0 0 8px;
+        position: fixed; /* tách icon cog ra khỏi sidebar */
+        transform: translateX(-100%); /* di chuyển icon cog về phía bên tay trái (100% so với button)*/
+        transition: .5s;
+        &:focus{
+            outline: none;
+        }
+    }
+    .sidebarMini__content {
+        width: 150px;
+        padding: $pd-3;
+        text-align: center;
+        h2 {
+            font-size: $fs-0;
+        }
+        .switch{
+            height: 25px;
+            width: 50px;
+            margin: 0 $mg-0 + 5;
+            position: relative;
+            input{
+                display: none;
+                &:checked + .slider{//dấu  "+" giúp tìm các thẻ cùng cấp ở dưới input
+                    /* giống với sự kiện hover, nhưng đây là khi ấn vào thì tahy đổi */
+                    &::before{
+                        transform: translateX(22px);
+                    }
+                }
+            }
+            .slider{
+                background-color: $color-gray-7;
+                position: absolute;/* để thẻ bị trượt qua trượt lại */
+                right: 0;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                border-radius: $border-radius-1;
+                cursor: pointer/* hiện hình bàn tay */;
+                &::before{
+                    content: '';
+                    height: 18px;
+                    width: 18px;
+                    background-color: $color-white-0;
+                    border-radius: 50%;
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 4px;
+                    left: 4px;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+    &.is-opened{
+        transform: translateX(60%);/* chỉ hiện lên 60% khi ấn vào icon cog (không đặt tên biến qua html, đặt tên qua scss)*/
+    }
+}

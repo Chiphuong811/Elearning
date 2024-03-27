@@ -1,0 +1,32 @@
+//customize code in library (prev & next)
+.owl-carousel {
+    .owl-nav {
+        button {
+            &.owl-prev,
+            &.owl-next {
+                color: $color-blue-0;
+                background-color: $color-white-0;
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                box-shadow: 0 2px 8px 2px $color-black-1; //X,Y,blur,flish
+                font-size: $fs-5;
+                position: absolute;//father card đã khai báo relatetive
+                top: 35%;
+                &:hover{
+                    background-color: $color-white-0;
+                    color:$color-blue-0;
+                }
+                &:focus{
+                    outline: none;
+                }
+            }
+            &.owl-prev{
+                left: -30px;
+            }
+            &.owl-next{
+                right: -30px;
+            }
+        }
+    }
+}

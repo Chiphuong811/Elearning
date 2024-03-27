@@ -1,0 +1,53 @@
+footer{
+    @include styleText($color-gray-0, $fs-1, $fw-0);
+    .footer__top{
+        width: 90%;
+        margin: $mg-4 auto;
+        ul{
+            height: 110px; /* đảo chiều flex để chia các phần ưtr trên 1 cột */
+            .nav-item{
+                flex-basis: 25%; /* coi height là 100% -> có 4 hàng trên 1 cột -> 100/4 (thuộc tính này chia các item theo chiều dọc; flex-derection:column là chía số lượng item theo chiều dọc*/
+                .nav-link{
+                    color: $color-blue-0;
+                    padding: 0;
+                    &.bold{
+                        font-weight: $fw-2;
+                    }
+                }
+            }
+        }
+        .btn-group{
+            display: block;/* take button to right */
+            .button--dropup{
+                min-width: 160px;
+                box-shadow: none;
+                i{
+                    padding: 0 $pd-2;
+                }
+                &::after{/* arrow */
+                    margin-left: 30%;
+                }
+            }
+            .dropdown-menu{
+                font-size: $fs-1;
+            }
+        }
+    }
+    .footer__bottom{
+        width: 90%;
+        margin: $mg-3 - 2 auto;
+        img{
+            width: 110px;
+            margin-right: $mg-0 + 5;
+        }
+        .logo--black{
+            display: inline-block;
+        }
+        .logo--white{
+            display: none;
+        }
+        .nav-link{
+            @include styleText($color-blue-0,$fs-1,$fw-1);
+        }
+    }
+}

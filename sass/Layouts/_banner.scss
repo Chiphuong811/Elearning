@@ -1,0 +1,19 @@
+.banner{
+    //background: color url() position(md:trái)/bg-size(md kích thước hình) bg-repeat(md là có)
+    background: url('../img/udemy-logo-semi-transparent.svg') 0/30% no-repeat,linear-gradient(61deg,$color-purple,$color-blue-1 42%); /* có thể kết hợp 2 hình ảnh/chuyển màu bằng dấu phẩy thay vì phải khai báo 2 lần bg, làm web chỉ hiện được 1 hình */
+    background-blend-mode: overlay;/* hòa trộn màu trong design, điều chỉnh chỉnh độ nhạt màu của đuôi chữ "u" (điều chỉnh đậm nhạt, tương phản, độ sáng) của css3 */ //overlay: trung hòa giữa 2 màu của của bg
+    height: 325px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    h2{
+        @include styleText($color-white-0,$fs-4,$fw-0);
+    }
+    p{
+        color: $color-white-0;
+        margin-bottom: 0;
+    }
+    button{
+        margin: $mg-0 + 5 0;
+    }
+}

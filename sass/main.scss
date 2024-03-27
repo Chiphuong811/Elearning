@@ -1,0 +1,42 @@
+//Helpers
+@import './Helpers/mixin';
+@import './Helpers/variables';
+@import './Helpers/extend';
+
+//Base
+@import './Base/reset';
+@import './Base/customize';
+
+//Layouts
+@import './Layouts/sidebarMini';
+@import './Layouts/header';
+@import './Layouts/intro';
+@import './Layouts/courses';
+@import './Layouts/viewing';
+@import './Layouts/banner';
+@import './Layouts/categories';
+@import './Layouts/students';
+@import './Layouts/partner';
+@import './Layouts/jobs';
+@import './Layouts/footer';
+
+//Components
+@import './Components/button';
+@import './Components/card';
+@import './Components/cover';
+
+//Pages
+@import './Pages/home';
+
+//Theme
+@import './Theme/dark/resetDark'; //file reset nằm ở trên file theme
+@import './Theme/dark/sidebarMiniDark';
+@import './Theme/dark/headerDark';
+@import './Theme/dark/buttonDark';
+@import './Theme/dark/coursesDark';
+@import './Theme/dark/cardDark';
+@import './Theme/dark/categoriesDark';
+@import './Theme/dark/studentDark';
+@import './Theme/dark/jobsDark';
+@import './Theme/dark/partnerDark';
+@import './Theme/dark/footerDark';
